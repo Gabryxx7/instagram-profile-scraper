@@ -1,4 +1,8 @@
-instagram_data_download/*/*
+instagram_data_download
+photos
+Logs
+tmp
+__pycache__
 
 *.no_commit*
 *.no-commit*

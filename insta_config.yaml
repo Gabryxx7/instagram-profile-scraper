@@ -3,11 +3,14 @@ username: <username>
 password: <password>
 
 # Pre-set cookies from your browser's session!
-cookie: xxxxxxxx...
-query_hash: xxxxxxxx....
+cookie: mid=Yf9iv...
+query_hash: "8c2a..."
+
+logs_folder: "./Logs/"
+tmp_files_folder: "./tmp/"
 
 # PushBullet access token to notify your phone!
-pushbullet_token: xxxxx....
+pushbullet_token: "o.X0..."
 
 # Path to the yaml file with your update instagram profile data
 photo_list_filepath: "./photos-list.yml"
