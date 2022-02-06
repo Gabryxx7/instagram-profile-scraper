@@ -210,15 +210,15 @@ class ScraperBot:
     def export_to_file(self, posts_list, filename):
         with open(filename, "w", encoding = 'utf-8') as f:
             if "json" in photo_list_path:
-                json.safe_dump(posts_list, f)
+                json.dump(posts_list, f)
             else:
-                yaml.safe_dump(posts_list, f)
+                yaml.safe_dump(posts_list, yml_file)
 
     def update_photo_list(self, photo_list_path, photo_folder="."):
         try:
             with open(photo_list_path, "r") as f:
                 if "json" in photo_list_path:
-                    photo_list = json.safe_load(f)
+                    photo_list = json.load(f)
                 else:
                     photo_list = yaml.safe_load(f)
         except Exception as e:
