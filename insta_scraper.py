@@ -283,7 +283,10 @@ class ScraperBot:
         # if cookies is None:
         #     cookies = get_insta_cookies();
         first_page_data = requests.get(starting_url, cookies=cookies)
-        first_page = first_page_data.json()
+        first_page_data.encoding = first_page_data.apparent_encoding
+        first_page = first_page_data.text.replace(r"\u", r"\\u")
+        # print(first_page)
+        first_page = json.loads(first_page)
         user_data = first_page["graphql"]["user"]
         profile_metadata["posts_data"].extend(user_data["edge_owner_to_timeline_media"]["edges"])
         total = user_data["edge_owner_to_timeline_media"]["count"]
